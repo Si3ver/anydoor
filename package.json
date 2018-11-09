@@ -2,7 +2,7 @@
   "name": "anydoor",
   "version": "1.0.0",
   "description": "nodejs static web server",
-  "author": "si3ver",
+  "author": "Si3ver<izhouwl@163.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Si3ver/anydoor/issues"
@@ -12,17 +12,20 @@
     "type": "git",
     "url": "git+https://github.com/Si3ver/anydoor.git"
   },
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
     "lint": "eslint .",
     "fix": "eslint --fix .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "supervisor src/app.js"
   },
   "pre-commit": [
     "fix",
     "lint"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "chalk": "^2.4.1"
+  },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
